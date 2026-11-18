@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* =============================
+      TIPOGRAFI & SETTING DASAR
+  ============================= */
+  --sans: "Lexend", sans-serif;
+  --heading: "Lexend", sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 16px/145% var(--sans);
+  font-size: 0.875rem;
+  line-height: 21px;
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+  }
+
+  /* =========================================================
+      WARNA KUSTOM DISESUAIKAN DENGAN KEGUNAAN ROOT
+  ========================================================= */
+
+  /* Background & Layout */
+  --background: #f0f3f6; /* Warna latar belakang utama aplikasi */
+  --foreground: #0d121c; /* Warna teks utama */
+
+  --card: #f7fafc; /* Warna latar card */
+  --card-foreground: #0d121c; /* Warna teks di dalam card */
+
+  --popover: #ffffff;
+  --popover-foreground: #0d121c;
+
+  /* Teks Khusus */
+  --text: #6b6375; /* Teks sekunder/muted lama */
+  --text-h: #08060d; /* Teks heading */
+  --text-muted: #4d6699; /* Teks penjelasan/muted baru */
+  --text-hero: #ffffff; /* Teks terang di area hero */
+
+  /* Tombol Utama (Primary) */
+  --primary: #457566; /* Warna background tombol utama */
+  --primary-foreground: #ffffff; /* Warna teks tombol utama */
+
+  /* Tombol Sekunder (Secondary) */
+  --secondary: #e8ebf2; /* Warna background tombol sekunder */
+  --secondary-foreground: #0d121c; /* Warna teks tombol sekunder */
+
+  /* Header & Navbar */
+  --header-bg: #ffffff;
+  --header-text: #0d121c;
+  --header-text-hover: #457566;
+  --header-border: #e5e8eb;
+
+  /* Border & Garis */
+  --border: #cfd6e8; /* Border card/elemen */
+  --input: #e5e8eb;
+  --ring: #457566; /* Fokus ring */
+
+  /* Lain-lain */
+  --muted: #e8ebf2;
+  --muted-foreground: #4d6699;
+  --destructive: #ef4444;
+  --radius: 0.625rem;
+
+  /* Sidebar */
+  --sidebar: #f7fafc;
+  --sidebar-foreground: #0d121c;
+  --sidebar-primary: #457566;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e8ebf2;
+  --sidebar-accent-foreground: #0d121c;
+  --sidebar-border: #e5e8eb;
+  --sidebar-ring: #457566;
+}
+
+.dark {
+  --background: #16171d;
+  --foreground: #f3f4f6;
+  --card: #1f2028;
+  --card-foreground: #f3f4f6;
+  --text: #9ca3af;
+  --text-h: #f3f4f6;
+  --header-bg: #16171d;
+  --header-text: #f3f4f6;
+  --header-border: #2e303a;
+
+  /* #social .button-icon {
+    filter: invert(1) brightness(2);
+  } */
+}
+
+@theme inline {
+  /* Daftarkan variabel kegunaan ke Tailwind v4 */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-text: var(--text);
+  --color-text-h: var(--text-h);
+  --color-text-muted: var(--text-muted);
+  --color-text-hero: var(--text-hero);
+
+  --color-header-bg: var(--header-bg);
+  --color-header-text: var(--header-text);
+  --color-header-text-hover: var(--header-text-hover);
+  --color-header-border: var(--header-border);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+  main {
+    @apply flex flex-col items-center p-4 gap-6;
+  }
+}
