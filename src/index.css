@@ -44,10 +44,8 @@
   --popover-foreground: #0d121c;
 
   /* Teks Khusus */
-  --text: #6b6375; /* Teks sekunder/muted lama */
-  --text-h: #08060d; /* Teks heading */
-  --text-muted: #4d6699; /* Teks penjelasan/muted baru */
-  --text-hero: #ffffff; /* Teks terang di area hero */
+  --text-main: #0D121C;
+  --text-subdued: #4d6699;
 
   /* Tombol Utama (Primary) */
   --primary: #457566; /* Warna background tombol utama */
@@ -90,8 +88,7 @@
   --foreground: #f3f4f6;
   --card: #1f2028;
   --card-foreground: #f3f4f6;
-  --text: #9ca3af;
-  --text-h: #f3f4f6;
+  --text-main: #9ca3af; 
   --header-bg: #16171d;
   --header-text: #f3f4f6;
   --header-border: #2e303a;
@@ -115,10 +112,8 @@
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
 
-  --color-text: var(--text);
-  --color-text-h: var(--text-h);
-  --color-text-muted: var(--text-muted);
-  --color-text-hero: var(--text-hero);
+  --color-text-main: var(--text-main);
+  --color-text-subdued: var(--text-subdued);
 
   --color-header-bg: var(--header-bg);
   --color-header-text: var(--header-text);
@@ -162,5 +157,8 @@
   }
   main {
     @apply flex flex-col items-center p-4 gap-6;
+  }
+  .container {
+    @apply w-full max-w-7xl mx-auto;
   }
 }
