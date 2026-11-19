@@ -1,12 +1,17 @@
-import Header from "./components/organisems/Header";
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/organisms/Header";
 import HomePage from "./pages/HomePage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
     <>
       <Header />
       <main>
-        <HomePage />
+        <Routes>
+          <Route path="*" element={<NotFoundPage />} />
+          <Route path="/" element={<HomePage />} />
+        </Routes>
       </main>
       <footer></footer>
     </>
