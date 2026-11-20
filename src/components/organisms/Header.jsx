@@ -65,7 +65,7 @@ function Header() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 w-full border-b border-border bg-background transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)]",
+        "fixed inset-x-0 top-0 z-50 w-full bg-background transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)]",
         isHidden ? "-translate-y-full pointer-events-none" : "translate-y-0",
       )}
     >
