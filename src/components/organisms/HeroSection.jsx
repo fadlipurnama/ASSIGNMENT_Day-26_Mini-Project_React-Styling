@@ -1,4 +1,3 @@
-import heroImage from "@/assets/images/hero.png";
 import { Button } from "@/components/atoms/button";
 
 function HeroSection() {
@@ -24,7 +23,7 @@ function HeroSection() {
         after:content-[''] after:absolute after:top-0 after:left-0 after:size-full after:pointer-events-none after:bg-linear-to-r after:from-black/28 after:to-black/50"
         >
           <img
-            src={heroImage}
+            src={"/assets/images/hero.png"}
             alt="Hero Image"
             className="absolute size-full object-cover rounded-r-md"
           />
