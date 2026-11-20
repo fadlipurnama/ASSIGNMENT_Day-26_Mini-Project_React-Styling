@@ -26,47 +26,34 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @media (max-width: 1024px) {
-  }
+  @media (max-width: 1024px) {}
 
   /* =========================================================
       WARNA KUSTOM DISESUAIKAN DENGAN KEGUNAAN ROOT
   ========================================================= */
 
-  /* Background & Layout */
-  --background: #f0f3f6; /* Warna latar belakang utama aplikasi */
-  --foreground: #0d121c; /* Warna teks utama */
+  --background: #f0f3f6;
+  --background-hover: #45756634;
 
-  --card: #f7fafc; /* Warna latar card */
-  --card-foreground: #0d121c; /* Warna teks di dalam card */
+  --foreground: #0d121c;
+  --muted-foreground: #9ca3af;
+
+  --card: #f7fafc;
+  --card-foreground: #0d121c;
 
   --popover: #ffffff;
   --popover-foreground: #0d121c;
 
-  /* Teks Khusus */
-  --text-main: #0D121C;
-  --text-subdued: #4d6699;
+  --primary: #457566;
+  --primary-foreground: #f3f4f6;
 
-  /* Tombol Utama (Primary) */
-  --primary: #457566; /* Warna background tombol utama */
-  --primary-foreground: #ffffff; /* Warna teks tombol utama */
+  --secondary: #e8ebf2;
+  --secondary-foreground: #0d121c;
 
-  /* Tombol Sekunder (Secondary) */
-  --secondary: #e8ebf2; /* Warna background tombol sekunder */
-  --secondary-foreground: #0d121c; /* Warna teks tombol sekunder */
-
-  /* Header & Navbar */
-  --header-bg: #ffffff;
-  --header-text: #0d121c;
-  --header-text-hover: #457566;
-  --header-border: #e5e8eb;
-
-  /* Border & Garis */
-  --border: #cfd6e8; /* Border card/elemen */
+  --border: #cfd6e8;
   --input: #e5e8eb;
-  --ring: #457566; /* Fokus ring */
+  --ring: #457566;
 
-  /* Lain-lain */
   --muted: #e8ebf2;
   --muted-foreground: #4d6699;
   --destructive: #ef4444;
@@ -84,14 +71,15 @@
 }
 
 .dark {
-  --background: #16171d;
-  --foreground: #f3f4f6;
+  --background: #212934;
+  --background-hover: #45756638;
+
+  --foreground: #E1E7EC;
+  --muted-foreground: #9ca3af;
+
   --card: #1f2028;
   --card-foreground: #f3f4f6;
-  --text-main: #9ca3af; 
-  --header-bg: #16171d;
-  --header-text: #f3f4f6;
-  --header-border: #2e303a;
+
 
   /* #social .button-icon {
     filter: invert(1) brightness(2);
@@ -101,7 +89,11 @@
 @theme inline {
   /* Daftarkan variabel kegunaan ke Tailwind v4 */
   --color-background: var(--background);
+  --color-background-hover: var(--background-hover);
+
   --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
@@ -114,11 +106,6 @@
 
   --color-text-main: var(--text-main);
   --color-text-subdued: var(--text-subdued);
-
-  --color-header-bg: var(--header-bg);
-  --color-header-text: var(--header-text);
-  --color-header-text-hover: var(--header-text-hover);
-  --color-header-border: var(--header-border);
 
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
@@ -149,15 +136,19 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }
+
   main {
-    @apply flex flex-col items-center p-4 gap-6;
+    @apply flex flex-col items-center gap-6 mb-100;
   }
+
   .container {
     @apply w-full max-w-7xl mx-auto;
   }
