@@ -32,11 +32,13 @@
       WARNA KUSTOM DISESUAIKAN DENGAN KEGUNAAN ROOT
   ========================================================= */
 
-  --background: #f0f3f6;
-  --background-hover: #45756634;
+  --background: #FAFAFA;
 
   --foreground: #0d121c;
-  --muted-foreground: #9ca3af;
+  --foreground-muted: #727d8b;
+
+  --surface: #FFFFFF;
+  --surface-foreground: #0d121c;
 
   --card: #f7fafc;
   --card-foreground: #0d121c;
@@ -55,7 +57,6 @@
   --ring: #457566;
 
   --muted: #e8ebf2;
-  --muted-foreground: #4d6699;
   --destructive: #ef4444;
   --radius: 0.625rem;
 
@@ -72,10 +73,9 @@
 
 .dark {
   --background: #212934;
-  --background-hover: #45756638;
 
   --foreground: #E1E7EC;
-  --muted-foreground: #9ca3af;
+  --foreground-muted: #AEBECD;
 
   --card: #1f2028;
   --card-foreground: #f3f4f6;
@@ -89,10 +89,12 @@
 @theme inline {
   /* Daftarkan variabel kegunaan ke Tailwind v4 */
   --color-background: var(--background);
-  --color-background-hover: var(--background-hover);
-
+  
   --color-foreground: var(--foreground);
-  --color-muted-foreground: var(--muted-foreground);
+  --color-foreground-muted: var(--foreground-muted);
+
+  --color-surface: var(--surface);
+  --color-surface-forgound: var(--surface-forgound);
 
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
@@ -108,7 +110,6 @@
   --color-text-subdued: var(--text-subdued);
 
   --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
   --color-destructive: var(--destructive);
   --color-border: var(--border);
   --color-input: var(--input);
@@ -138,7 +139,7 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground mb-100;
   }
 
   html {
@@ -146,7 +147,7 @@
   }
 
   main {
-    @apply flex flex-col items-center gap-6 mb-100;
+    @apply flex flex-col items-center gap-6;
   }
 
   .container {
