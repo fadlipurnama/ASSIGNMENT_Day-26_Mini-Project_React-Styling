@@ -64,13 +64,17 @@ function Header() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 w-full bg-background transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)]",
+        "container fixed inset-x-0 top-0 p-4 py-3 z-50 w-full bg-background transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)]",
         isHidden ? "-translate-y-full pointer-events-none" : "translate-y-0",
       )}
     >
-      <div className="flex py-3 px-10 justify-between items-center">
+      <div className="flex justify-between items-center">
         <a href="/">
-          <img src={"/assets/images/logo.png"} alt="Gambar Logo" className="w-26.25 h-5.75" />
+          <img
+            src={"/assets/images/logo.png"}
+            alt="Gambar Logo"
+            className="w-26.25 h-5.75"
+          />
         </a>
         <Button
           onClick={() => setIsOpen((prev) => !prev)}

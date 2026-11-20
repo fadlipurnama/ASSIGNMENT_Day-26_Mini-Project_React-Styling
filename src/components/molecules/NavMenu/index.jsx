@@ -1,7 +1,7 @@
 import { Button } from "@/components/atoms/button";
 import { cn } from "cn";
 import { X } from "lucide-react";
-import NavList from "./nav-list";
+import NavList from "./NavList";
 
 function NavMenu({ isOpen, setIsOpen }) {
   return (
