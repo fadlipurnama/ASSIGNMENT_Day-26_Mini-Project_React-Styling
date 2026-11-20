@@ -15,7 +15,7 @@
   --mono: ui-monospace, Consolas, monospace;
 
   font: 16px/145% var(--sans);
-  font-size: 0.875rem;
+  /* font-size: 0.875rem; */
   line-height: 21px;
   letter-spacing: 0.18px;
   color-scheme: light dark;
@@ -25,8 +25,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {}
 
   /* =========================================================
       WARNA KUSTOM DISESUAIKAN DENGAN KEGUNAAN ROOT
@@ -58,7 +56,6 @@
 
   --muted: #e8ebf2;
   --destructive: #ef4444;
-  --radius: 0.625rem;
 
   /* Sidebar */
   --sidebar: #f7fafc;
@@ -98,6 +95,7 @@
 
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
+
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
 
@@ -105,9 +103,6 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
-
-  --color-text-main: var(--text-main);
-  --color-text-subdued: var(--text-subdued);
 
   --color-muted: var(--muted);
   --color-destructive: var(--destructive);
@@ -124,13 +119,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
+  
 }
 
 @layer base {
@@ -139,7 +128,7 @@
   }
 
   body {
-    @apply bg-background text-foreground mb-100;
+    @apply bg-background text-foreground;
   }
 
   html {
@@ -147,7 +136,7 @@
   }
 
   main {
-    @apply flex flex-col items-center gap-6;
+    @apply flex flex-col p-6 items-center gap-6;
   }
 
   .container {
