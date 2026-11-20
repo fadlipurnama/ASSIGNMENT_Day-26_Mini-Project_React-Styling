@@ -19,7 +19,7 @@ function NavList() {
               end={href === "/"}
               className={({ isActive }) =>
                 cn(
-                  "font-medium text-foreground py-2 px-3 cursor-pointer hover:bg-background-hover rounded-sm",
+                  "font-medium text-foreground py-2 px-3 cursor-pointer hover:bg-primary/20 hover:text-primary dark:hover:text-surface rounded-sm",
                   isActive && "border-b-2 border-b-primary rounded-b-none",
                 )
               }
