@@ -1,4 +1,3 @@
-import logo from "@/assets/images/logo.png";
 import { Button } from "@/components/atoms/button";
 import { Menu } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -71,7 +70,7 @@ function Header() {
     >
       <div className="flex py-3 px-10 justify-between items-center">
         <a href="/">
-          <img src={logo} alt="Gambar Logo" className="w-26.25 h-5.75" />
+          <img src={"/assets/images/logo.png"} alt="Gambar Logo" className="w-26.25 h-5.75" />
         </a>
         <Button
           onClick={() => setIsOpen((prev) => !prev)}
