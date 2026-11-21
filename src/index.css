@@ -125,7 +125,7 @@
   }
 
   main {
-    @apply flex bg-background flex-col p-6 items-center gap-6;
+    @apply flex bg-background flex-col p-6 items-center gap-12 text-foreground;
   }
 
   .container {
