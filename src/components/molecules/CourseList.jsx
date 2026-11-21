@@ -9,17 +9,18 @@ import { cn } from "cn";
 
 function CourseList({ courses, className = "" }) {
   return (
-    <div className={cn("grid sm:grid-cols-2 gap-4", className)}>
-      {courses.map(({ id, icon, title, description }) => (
+    <div className={cn("grid sm:grid-cols-4 gap-4", className)}>
+      {courses.map((course) => (
         <Card
-          key={id}
+          key={course.id}
           className="border cursor-pointer shadow-md hover:border-primary hover:shadow-lg"
         >
           <CardHeader>
-            <DynamicIcon name={icon} className="size-8 text-primary" />
-            <CardTitle className="text-base font-semibold">{title}</CardTitle>
+            <CardTitle className="text-base font-semibold">
+              {course.title}
+            </CardTitle>
             <CardDescription className="text-foreground-muted">
-              {description}
+              {course.description}
             </CardDescription>
           </CardHeader>
         </Card>
