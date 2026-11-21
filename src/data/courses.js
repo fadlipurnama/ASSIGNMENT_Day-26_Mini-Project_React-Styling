@@ -1,0 +1,176 @@
+export const COURSES_LIST = [
+  {
+    id: "web-development-fundamentals",
+    title: "Web Development Fundamentals",
+    description:
+      "Learn the basics of HTML, CSS, and JavaScript to build your first website.",
+    image: "/assets/images/courses/web-development-fundamental.png",
+    alt: "Web Development Courses",
+    slug: "web-development-fundamentals",
+    level: "Beginner",
+    rating: 4.8,
+    reviewCount: 184,
+    featured: true,
+    curriculum: {
+      totalSections: 2,
+      totalLessons: 8,
+      totalDuration: "1j 45m",
+      sections: [
+        {
+          id: "sec-1",
+          title: "Pengenalan & Struktur Dasar Web",
+          lessonCount: 4,
+          duration: "45m",
+          lessons: [
+            { id: "les-1", title: "Pengantar Web Development", duration: "05:20", isPreview: true },
+            { id: "les-2", title: "Cara Kerja Browser & HTTP", duration: "10:15", isPreview: true },
+            { id: "les-3", title: "Struktur Dokumen HTML5 Semantik", duration: "14:40", isPreview: false },
+            { id: "les-4", title: "Form & Validasi Dasar HTML", duration: "14:45", isPreview: false },
+          ],
+        },
+        {
+          id: "sec-2",
+          title: "Styling Modern & Interaktivitas Dasar",
+          lessonCount: 4,
+          duration: "1j 00m",
+          lessons: [
+            { id: "les-5", title: "Box Model, Flexbox & CSS Grid", duration: "18:30", isPreview: false },
+            { id: "les-6", title: "Responsive Design dengan Media Queries", duration: "14:10", isPreview: false },
+            { id: "les-7", title: "Dasar Variabel & Tipe Data JavaScript", duration: "12:20", isPreview: false },
+            { id: "les-8", title: "Manipulasi DOM & Event Listener", duration: "15:00", isPreview: false },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    id: "advanced-javascript-techniques",
+    title: "Advanced JavaScript Techniques",
+    description:
+      "Dive deep into JavaScript concepts like asynchronous programming, closures, and ES6 features.",
+    image: "/assets/images/courses/advanced-javaScript-techniques.png",
+    alt: "Advanced Javascript Course",
+    slug: "advanced-javascript-techniques",
+    level: "Intermediate",
+    rating: 4.9,
+    reviewCount: 129,
+    featured: true,
+    curriculum: {
+      totalSections: 2,
+      totalLessons: 7,
+      totalDuration: "2j 10m",
+      sections: [
+        {
+          id: "sec-1",
+          title: "Execution Context & Functional Patterns",
+          lessonCount: 4,
+          duration: "1j 05m",
+          lessons: [
+            { id: "les-1", title: "Pengantar Advanced JavaScript", duration: "04:12", isPreview: true },
+            { id: "les-2", title: "Scope, Hoisting & Closures", duration: "18:45", isPreview: true },
+            { id: "les-3", title: "Higher-Order Functions & Currying", duration: "20:10", isPreview: false },
+            { id: "les-4", title: "Keyword 'this' & Prototypal Inheritance", duration: "21:53", isPreview: false },
+          ],
+        },
+        {
+          id: "sec-2",
+          title: "Asynchronous JavaScript & ES6+",
+          lessonCount: 3,
+          duration: "1j 05m",
+          lessons: [
+            { id: "les-5", title: "Event Loop, Callback & Promise", duration: "22:30", isPreview: false },
+            { id: "les-6", title: "Async/Await & Error Handling", duration: "21:15", isPreview: false },
+            { id: "les-7", title: "Destructuring, Spread & ES Modules", duration: "21:15", isPreview: false },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    id: "ui-ux-design-techniques",
+    title: "UI/UX Design Techniques",
+    description:
+      "Learn user research, wireframing, interactive prototyping, and design systems in Figma to craft intuitive digital experiences.",
+    image: "/assets/images/courses/ui-ux-design.png",
+    alt: "UI/UX Design Course",
+    slug: "ui-ux-design-techniques",
+    level: "Beginner",
+    rating: 4.7,
+    reviewCount: 96,
+    featured: true,
+    curriculum: {
+      totalSections: 2,
+      totalLessons: 7,
+      totalDuration: "1j 55m",
+      sections: [
+        {
+          id: "sec-1",
+          title: "UX Research & Wireframing",
+          lessonCount: 3,
+          duration: "50m",
+          lessons: [
+            { id: "les-1", title: "Pengantar UI vs UX Design", duration: "06:30", isPreview: true },
+            { id: "les-2", title: "User Persona & User Flow", duration: "21:15", isPreview: false },
+            { id: "les-3", title: "Low-Fidelity Wireframing di Figma", duration: "22:15", isPreview: false },
+          ],
+        },
+        {
+          id: "sec-2",
+          title: "Design System & Interactive Prototyping",
+          lessonCount: 4,
+          duration: "1j 05m",
+          lessons: [
+            { id: "les-4", title: "Color Palette, Typography & Spacing", duration: "16:40", isPreview: true },
+            { id: "les-5", title: "Auto Layout & Component Variants", duration: "19:20", isPreview: false },
+            { id: "les-6", title: "Membuat Interactive Prototype", duration: "15:00", isPreview: false },
+            { id: "les-7", title: "Usability Testing & Developer Handoff", duration: "14:00", isPreview: false },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    id: "building-modern-web-apps-with-react",
+    title: "Building Modern Web Apps With React",
+    description:
+      "Master component-based architecture, state management with Hooks, and client-side routing to build fast, scalable web applications.",
+    image: "/assets/images/courses/building-modern-web-react.png",
+    alt: "Modern Web React Course",
+    slug: "building-modern-web-apps-with-react",
+    level: "Intermediate",
+    rating: 4.9,
+    reviewCount: 215,
+    featured: true,
+    curriculum: {
+      totalSections: 2,
+      totalLessons: 8,
+      totalDuration: "2j 31m",
+      sections: [
+        {
+          id: "sec-1",
+          title: "Fundamental Komponen & React Hooks",
+          lessonCount: 4,
+          duration: "1j 10m",
+          lessons: [
+            { id: "les-1", title: "Pengantar & Setup Project Vite + React", duration: "04:42", isPreview: true },
+            { id: "les-2", title: "JSX, Props & Komposisi Komponen", duration: "18:08", isPreview: true },
+            { id: "les-3", title: "State Management dengan useState", duration: "22:17", isPreview: false },
+            { id: "les-4", title: "Side Effects & Lifecycle dengan useEffect", duration: "24:53", isPreview: false },
+          ],
+        },
+        {
+          id: "sec-2",
+          title: "Arsitektur Skalabel & Data Fetching",
+          lessonCount: 4,
+          duration: "1j 21m",
+          lessons: [
+            { id: "les-5", title: "Menyusun Struktur Atomic Design", duration: "17:16", isPreview: false },
+            { id: "les-6", title: "Client-Side Routing dengan React Router", duration: "21:50", isPreview: false },
+            { id: "les-7", title: "Data Fetching & Caching dengan TanStack Query", duration: "24:15", isPreview: false },
+            { id: "les-8", title: "Optimasi Performa & Deployment", duration: "17:39", isPreview: false },
+          ],
+        },
+      ],
+    },
+  },
+];
