@@ -17,9 +17,11 @@ function BenefitList({ benefits, className = "" }) {
         >
           <CardHeader>
             <DynamicIcon name={icon} className="size-8 text-primary" />
-            <CardTitle className="text-base font-semibold">{title}</CardTitle>
+            <CardTitle className="text-base font-semibold">
+              <h3>{title}</h3>
+            </CardTitle>
             <CardDescription className="text-foreground-muted">
-              {description}
+              <p>{description}</p>
             </CardDescription>
           </CardHeader>
         </Card>
