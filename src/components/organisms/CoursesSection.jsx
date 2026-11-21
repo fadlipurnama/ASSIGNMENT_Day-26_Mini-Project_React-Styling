@@ -17,7 +17,7 @@ function CoursesSection() {
     : "Failed to load courses data";
 
   return (
-    <section className="container flex flex-col gap-10 w-full p-4 bg-background">
+    <section className="container flex flex-col gap-10 p-4 bg-background">
       <div className="flex gap-4 items-center">
         <h2 className="max-w-1/2 text-foreground font-black text-3xl tracking-[-1px]">
           Start Learning Design & Development with Our Featured Courses
