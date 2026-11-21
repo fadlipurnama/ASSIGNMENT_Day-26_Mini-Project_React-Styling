@@ -7,82 +7,71 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* =============================
-      TIPOGRAFI & SETTING DASAR
-  ============================= */
-  --sans: "Lexend", sans-serif;
-  --heading: "Lexend", sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  --background: #f9faf9;
 
-  font: 16px/145% var(--sans);
-  /* font-size: 0.875rem; */
-  line-height: 21px;
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--background);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --foreground: #111816;
+  --foreground-muted: #5f6d68;
 
-  /* =========================================================
-      WARNA KUSTOM DISESUAIKAN DENGAN KEGUNAAN ROOT
-  ========================================================= */
+  --surface: #ffffff;
+  --surface-foreground: #111816;
 
-  --background: #FAFAFA;
-
-  --foreground: #0d121c;
-  --foreground-muted: #727d8b;
-
-  --surface: #FFFFFF;
-  --surface-foreground: #0d121c;
-
-  --card: #f7fafc;
-  --card-foreground: #0d121c;
+  --card: #ffffff;
+  --card-foreground: #111816;
 
   --popover: #ffffff;
-  --popover-foreground: #0d121c;
+  --popover-foreground: #111816;
 
   --primary: #457566;
-  --primary-foreground: #f3f4f6;
+  --primary-foreground: #f7faf9;
 
-  --secondary: #e8ebf2;
-  --secondary-foreground: #0d121c;
+  --secondary: #eef2f0;
+  --secondary-foreground: #14201c;
 
-  --border: #cfd6e8;
-  --input: #e5e8eb;
+  --border: #dce3e0;
+  --input: #e2e8e5;
   --ring: #457566;
 
-  --muted: #e8ebf2;
-  --destructive: #ef4444;
+  --muted: #eef2f0;
+  --destructive: #dc2626;
+}
+.dark {
+  --background: #131816;
+
+  --foreground: #edf2f0;
+  --foreground-muted: #98a8a2;
+
+  --surface: #181f1c;
+  --surface-foreground: #edf2f0;
+
+  --card: #1b221f;
+  --card-foreground: #edf2f0;
+
+  --popover: #1b221f;
+  --popover-foreground: #edf2f0;
+
+  --primary: #457566;
+  --primary-foreground: #f4f8f6;
+
+  --secondary: #222c28;
+  --secondary-foreground: #e3ebe8;
+
+  --border: #2a3631;
+  --input: #27322d;
+  --ring: #5c9482;
+
+  --muted: #202925;
+  --destructive: #f87171;
 
   /* Sidebar */
-  --sidebar: #f7fafc;
-  --sidebar-foreground: #0d121c;
+  --sidebar: #161c19;
+  --sidebar-foreground: #edf2f0;
   --sidebar-primary: #457566;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #e8ebf2;
-  --sidebar-accent-foreground: #0d121c;
-  --sidebar-border: #e5e8eb;
-  --sidebar-ring: #457566;
+  --sidebar-primary-foreground: #f4f8f6;
+  --sidebar-accent: #222c28;
+  --sidebar-accent-foreground: #e3ebe8;
+  --sidebar-border: #2a3631;
+  --sidebar-ring: #5c9482;
 }
-
-.dark {
-  --background: #212934;
-
-  --foreground: #E1E7EC;
-  --foreground-muted: #AEBECD;
-
-  --card: #1f2028;
-  --card-foreground: #f3f4f6;
-
-
-  /* #social .button-icon {
-    filter: invert(1) brightness(2);
-  } */
-}
-
 @theme inline {
   /* Daftarkan variabel kegunaan ke Tailwind v4 */
   --color-background: var(--background);
@@ -136,7 +125,7 @@
   }
 
   main {
-    @apply flex flex-col p-6 items-center gap-6;
+    @apply flex bg-background flex-col p-6 items-center gap-6;
   }
 
   .container {

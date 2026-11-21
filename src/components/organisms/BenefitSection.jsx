@@ -17,11 +17,11 @@ function BenefitSection() {
     : "Failed to load benefits data";
 
   return (
-    <section className="w-full p-4">
+    <section className="w-full p-4 bg-background">
       <div className="container flex flex-col gap-10">
         <div className="flex flex-col gap-4">
           <div className="flex gap-4 items-center">
-            <h2 className="font-black text-4xl leading-11.25 tracking-[-1px]">
+            <h2 className="text-foreground font-black text-4xl leading-11.25 tracking-[-1px]">
               Why Choose EduLearn?
             </h2>
             {error && (
@@ -36,7 +36,7 @@ function BenefitSection() {
               </Button>
             )}
           </div>
-          <p className="font-normal text-base leading-6 tracking-normal max-w-180 ">
+          <p className="font-normal text-base text-foreground-muted leading-6 tracking-normal max-w-180 ">
             Our platform is designed to provide a seamless and effective
             learning experience, ensuring you gain the skills you need to
             succeed.
