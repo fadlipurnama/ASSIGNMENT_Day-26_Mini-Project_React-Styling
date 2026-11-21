@@ -1,5 +1,5 @@
 import BenefitList from "@/components/molecules/BenefitList";
-import { fetchBenefits } from "@/services/benefits";
+import { fetchBenefits } from "@/services/data";
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "../atoms/button";
 import { RotateCw } from "lucide-react";
