@@ -5,7 +5,7 @@ import CoursesSection from "@/components/organisms/landing-page/CoursesSection";
 function HomePage() {
   return (
     <>
-      <h1 className="sr-only">eduCode - Home Page</h1>
+      <h1 className="sr-only">EDUCODE - Home Page</h1>
       <HeroSection />
       <BenefitSection />
       <CoursesSection />
