@@ -1,16 +1,86 @@
-# React + Vite
+# Assignment 26 - React Styling
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page kursus/edukasi LMS sederhana yang dibangun dengan React sebagai implementasi mini project pada materi React Styling, React Components, dan Props.
 
-Currently, two official plugins are available:
+## Nama Pembuat
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Muhammad Fadli Purnama - FWD#13
 
-## React Compiler
+## Ringkasan Project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Project ini menampilkan halaman utama platform edukasi bernama **EDUCODE**. Tampilan mencakup header navigasi, bagian hero, daftar manfaat, daftar kursus, dialog detail kursus, serta footer.
 
-## Expanding the ESLint configuration
+## Cara Menjalankan Proyek Secara Lokal
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Prasyarat:
+
+- Node.js
+- npm
+
+Langkah instalasi dan pengembangan:
+
+```bash
+npm install
+npm run dev
+```
+
+Vite akan menampilkan alamat server pengembangan di terminal, biasanya `http://localhost:5173`.
+
+Perintah lain yang tersedia:
+
+```bash
+npm run build
+npm run preview
+npm run lint
+```
+
+## Tech Stack & Styling Setup
+
+- React 19
+- Vite 8
+- Tailwind CSS 4 melalui `@tailwindcss/vite`
+- React Router DOM untuk routing halaman
+- TanStack React Query sebagai provider aplikasi
+- CSS variables pada `src/index.css`
+- Atomic Design untuk pengorganisasian komponen
+- Lucide React untuk ikon
+- shadcn dan Base UI untuk komponen UI
+
+Styling utama menggunakan utility class Tailwind CSS bersama CSS variables. Tema terang dan gelap didefinisikan melalui `[data-theme="light"]` dan `[data-theme="dark"]` di `src/index.css`, lalu dipetakan ke token Tailwind melalui blok `@theme inline`.
+
+## Struktur Folder & Arsitektur Komponen
+
+```text
+assignment-26-react/
+├── public/
+│   └── assets/images/       # Logo, ilustrasi, dan gambar kursus
+├── src/
+│   ├── components/
+│   │   ├── atoms/           # Badge, button, card, dialog, dan ikon
+│   │   ├── molecules/       # BenefitCard, CourseCard, CourseDialog, NavMenu
+│   │   └── organisms/       # Header, Footer, dan section landing page
+│   ├── data/                # Data manfaat dan daftar kursus
+│   ├── lib/                 # Utility bersama
+│   ├── pages/               # HomePage dan NotFoundPage
+│   ├── services/            # Fungsi pengambilan data lokal
+│   ├── App.jsx              # Routing utama dan layout aplikasi
+│   ├── index.css            # Import Tailwind, CSS variables, dan tema
+│   └── main.jsx             # Entry point React dan provider aplikasi
+├── context/                 # Dokumen assignment
+└── package.json
+```
+
+Organisasi komponen mengikuti pola Atomic Design:
+
+- **Atoms**: elemen UI dasar yang reusable.
+- **Molecules**: gabungan beberapa atom atau elemen UI dengan satu tanggung jawab.
+- **Organisms**: bagian halaman yang lebih kompleks, seperti header, footer, dan section landing page.
+- **Pages**: susunan organism dan section untuk membentuk halaman.
+- **Data**: sumber data dummy untuk manfaat dan kursus.
+- **Public**: aset statis yang dapat diakses langsung oleh aplikasi.
+
+Data kursus dan manfaat dikirim ke komponen melalui props. Aplikasi juga memiliki halaman not-found untuk route yang tidak dikenali.
+
+## Catatan Penggunaan AI
+
+AI digunakan sebagai alat bantu atau alat diskusi untuk menjelaskan beberapa materi yang kurang dipahami, melakukan eksplorasi implementasi, serta membantu penyusunan dokumentasi README ini.
