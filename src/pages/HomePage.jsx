@@ -1,6 +1,6 @@
-import HeroSection from "@/components/organisms/HeroSection";
-import BenefitSection from "../components/organisms/BenefitSection";
-import CoursesSection from "@/components/organisms/CoursesSection";
+import HeroSection from "@/components/organisms/landing-page/HeroSection";
+import BenefitSection from "../components/organisms/landing-page/BenefitSection";
+import CoursesSection from "@/components/organisms/landing-page/CoursesSection";
 
 function HomePage() {
   return (

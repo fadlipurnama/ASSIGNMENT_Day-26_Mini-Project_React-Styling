@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./components/organisms/Header";
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
+import Footer from "./components/organisms/Footer";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
         </Routes>
       </main>
-      <footer></footer>
+      <Footer />
     </>
   );
 }
