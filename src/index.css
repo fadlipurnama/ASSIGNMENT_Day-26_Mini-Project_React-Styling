@@ -4,83 +4,86 @@
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-:root {
-  --background: #f9faf9;
+:root,
+[data-theme="light"] {
+  --background: #f8f9fb;
 
-  --foreground: #111816;
-  --foreground-muted: #5f6d68;
+  --foreground: #12151c;
+  --foreground-muted: #5c6475;
 
   --surface: #ffffff;
-  --surface-foreground: #111816;
+  --surface-foreground: #12151c;
 
   --card: #ffffff;
-  --card-foreground: #111816;
+  --card-foreground: #12151c;
 
   --popover: #ffffff;
-  --popover-foreground: #111816;
+  --popover-foreground: #12151c;
 
-  --primary: #457566;
-  --primary-foreground: #f7faf9;
+  --primary: #4338ca;
+  --primary-foreground: #f8f9ff;
 
-  --secondary: #eef2f0;
-  --secondary-foreground: #14201c;
+  --secondary: #eef0f6;
+  --secondary-foreground: #181c28;
 
-  --border: #dce3e0;
-  --input: #e2e8e5;
-  --ring: #457566;
+  --border: #dde1eb;
+  --input: #e3e7f0;
+  --ring: #4338ca;
 
-  --muted: #eef2f0;
+  --muted: #eef0f6;
   --destructive: #dc2626;
 }
+
+[data-theme="dark"],
 .dark {
-  --background: #131816;
+  --background: #111318;
 
-  --foreground: #edf2f0;
-  --foreground-muted: #98a8a2;
+  --foreground: #edf0f7;
+  --foreground-muted: #98a2b8;
 
-  --surface: #181f1c;
-  --surface-foreground: #edf2f0;
+  --surface: #161920;
+  --surface-foreground: #edf0f7;
 
-  --card: #1b221f;
-  --card-foreground: #edf2f0;
+  --card: #191d26;
+  --card-foreground: #edf0f7;
 
-  --popover: #1b221f;
-  --popover-foreground: #edf2f0;
+  --popover: #191d26;
+  --popover-foreground: #edf0f7;
 
-  --primary: #457566;
-  --primary-foreground: #f4f8f6;
+  --primary: #6366f1;
+  --primary-foreground: #f5f6ff;
 
-  --secondary: #222c28;
-  --secondary-foreground: #e3ebe8;
+  --secondary: #202531;
+  --secondary-foreground: #e2e7f3;
 
-  --border: #2a3631;
-  --input: #27322d;
-  --ring: #5c9482;
+  --border: #282f3e;
+  --input: #252b39;
+  --ring: #818cf8;
 
-  --muted: #202925;
+  --muted: #1e232e;
   --destructive: #f87171;
 
   /* Sidebar */
-  --sidebar: #161c19;
-  --sidebar-foreground: #edf2f0;
-  --sidebar-primary: #457566;
-  --sidebar-primary-foreground: #f4f8f6;
-  --sidebar-accent: #222c28;
-  --sidebar-accent-foreground: #e3ebe8;
-  --sidebar-border: #2a3631;
-  --sidebar-ring: #5c9482;
+  --sidebar: #14171d;
+  --sidebar-foreground: #edf0f7;
+  --sidebar-primary: #6366f1;
+  --sidebar-primary-foreground: #f5f6ff;
+  --sidebar-accent: #202531;
+  --sidebar-accent-foreground: #e2e7f3;
+  --sidebar-border: #282f3e;
+  --sidebar-ring: #818cf8;
 }
+
 @theme inline {
-  /* Daftarkan variabel kegunaan ke Tailwind v4 */
   --color-background: var(--background);
-  
+
   --color-foreground: var(--foreground);
   --color-foreground-muted: var(--foreground-muted);
 
   --color-surface: var(--surface);
-  --color-surface-forgound: var(--surface-forgound);
+  --color-surface-foreground: var(--surface-foreground);
 
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
@@ -107,8 +110,6 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-
-  
 }
 
 @layer base {
@@ -125,10 +126,14 @@
   }
 
   main {
-    @apply flex bg-background flex-col p-6 items-center gap-12 text-foreground;
+    @apply flex flex-col p-6 items-center gap-12;
   }
 
   .container {
     @apply w-full max-w-7xl mx-auto;
+  }
+
+  .not-found-body {
+    @apply bg-muted dark:bg-gray-950;
   }
 }
