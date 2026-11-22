@@ -1,8 +1,8 @@
-import BenefitList from "@/components/molecules/BenefitList";
 import { fetchBenefits } from "@/services/data";
 import { useQuery } from "@tanstack/react-query";
-import { Button } from "../atoms/button";
+import { Button } from "../../atoms/button";
 import { RotateCw } from "lucide-react";
+import BenefitCard from "@/components/molecules/BenefitCard";
 
 function BenefitSection() {
   const { data, isLoading, isError, error, refetch, isFetching } = useQuery({
@@ -51,7 +51,12 @@ function BenefitSection() {
             </p>
           ) : (
             <div className="grid lg:grid-cols-3 gap-10">
-              <BenefitList benefits={data ?? []} className="col-span-2" />
+              <div className="col-span-2 grid sm:grid-cols-2 gap-4">
+                {data.map((benefit) => (
+                  <BenefitCard key={benefit.id} benefit={benefit} />
+                ))}
+              </div>
+
               <div className="hidden lg:flex items-center">
                 <img
                   src="assets/images/benefits.png"

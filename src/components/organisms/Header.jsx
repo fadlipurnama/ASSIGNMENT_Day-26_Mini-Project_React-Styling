@@ -1,14 +1,12 @@
 import { Button } from "@/components/atoms/button";
 import { Menu } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import NavMenu from "@/components/molecules/NavMenu";
 import { cn } from "cn";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isHidden, setIsHidden] = useState(false);
-
-  const lastScrollYRef = useRef(0);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 768px)");
@@ -27,30 +25,6 @@ function Header() {
   }, []);
 
   useEffect(() => {
-    lastScrollYRef.current = window.scrollY;
-
-    const handleScroll = () => {
-      const currentY = window.scrollY;
-      const diff = currentY - lastScrollYRef.current;
-
-      if (currentY <= 90 || isOpen) {
-        setIsHidden((prev) => (prev ? false : prev));
-      } else if (diff > 1) {
-        setIsHidden((prev) => (!prev ? true : prev));
-      } else if (diff < -1) {
-        setIsHidden((prev) => (prev ? false : prev));
-      }
-
-      lastScrollYRef.current = currentY;
-    };
-
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [isOpen]);
-
-  useEffect(() => {
     if (!isOpen) return;
 
     const prevOverflow = document.body.style.overflow;
@@ -64,18 +38,22 @@ function Header() {
   return (
     <header
       className={cn(
-        "container fixed inset-x-0 top-0 p-4 py-3 z-50 bg-background transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)]",
-        isHidden ? "-translate-y-full pointer-events-none" : "translate-y-0",
+        "container sticky top-0 z-50 mx-auto border-b bg-background px-4 py-3",
       )}
     >
-      <div className="flex justify-between items-center">
-        <a href="/">
+      <div className="flex items-center justify-between">
+        <Link to="/">
           <img
-            src={"/assets/images/logo.png"}
+            src="/assets/images/logo-lightmode.png"
             alt="Gambar Logo"
-            className="w-26.25 h-5.75"
+            className="w-32 object-contain dark:hidden"
           />
-        </a>
+          <img
+            src="/assets/images/logo-darkmode.png"
+            alt="Gambar Logo"
+            className="hidden w-32 object-contain dark:block"
+          />
+        </Link>
         <Button
           onClick={() => setIsOpen((prev) => !prev)}
           type="button"

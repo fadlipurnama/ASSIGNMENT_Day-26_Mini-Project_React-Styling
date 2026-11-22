@@ -2,7 +2,7 @@ import { Button } from "@/components/atoms/button";
 
 function HeroSection() {
   return (
-    <section className="container bg-background relative grid min-h-screen 2xl:min-h-150 rounded-md lg:grid-cols-2">
+    <section className="container bg-background relative grid min-h-[calc(100vh-8rem)] 2xl:min-h-150 rounded-md lg:grid-cols-2">
         <div className="flex flex-col justify-center items-center gap-5 z-20 p-4 lg:p-10">
           <h2 className="font-black text-5xl tracking-[-2px] leading-15 text-center text-white lg:text-foreground">
             Unlock Your Potential with eduCode
