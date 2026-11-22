@@ -19,16 +19,15 @@ function BenefitSection() {
   return (
     <section className="container flex flex-col gap-10 p-4 bg-background">
       <div className="flex flex-col gap-4">
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 items-start">
           <h2 className="text-foreground font-black text-4xl leading-11.25 tracking-[-1px]">
             Why Choose EduLearn?
           </h2>
           {error && (
             <Button
               onClick={() => refetch()}
-              variant="secondary"
               size="sm"
-              className="flex gap-2"
+              className="flex gap-2 mt-2"
             >
               Refresh
               <RotateCw />

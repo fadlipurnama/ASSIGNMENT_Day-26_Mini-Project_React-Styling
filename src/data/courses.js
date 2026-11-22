@@ -3,7 +3,7 @@ export const COURSES_LIST = [
     id: "web-development-fundamentals",
     title: "Web Development Fundamentals",
     description:
-      "Learn the basics of HTML, CSS, and JavaScript to build your first website.",
+      "Build your first responsive website by mastering HTML structure, CSS styling, and interactive JavaScript basics.",
     image: "/assets/images/courses/web-development-fundamental.png",
     alt: "Web Development Courses",
     slug: "web-development-fundamentals",
@@ -48,7 +48,7 @@ export const COURSES_LIST = [
     title: "Advanced JavaScript Techniques",
     description:
       "Dive deep into JavaScript concepts like asynchronous programming, closures, and ES6 features.",
-    image: "/assets/images/courses/advanced-javaScript-techniques.png",
+    image: "/assets/images/courses/advanced-javascript.png",
     alt: "Advanced Javascript Course",
     slug: "advanced-javascript-techniques",
     level: "Intermediate",
@@ -87,11 +87,11 @@ export const COURSES_LIST = [
     },
   },
   {
-    id: "ui-ux-design-techniques",
-    title: "UI/UX Design Techniques",
+    id: "modern-ui-ux-design-techniques",
+    title: "Modern UI/UX Design Techniques",
     description:
       "Learn user research, wireframing, interactive prototyping, and design systems in Figma to craft intuitive digital experiences.",
-    image: "/assets/images/courses/ui-ux-design.png",
+    image: "/assets/images/courses/modern-ui-ux-design.png",
     alt: "UI/UX Design Course",
     slug: "ui-ux-design-techniques",
     level: "Beginner",
@@ -133,7 +133,7 @@ export const COURSES_LIST = [
     id: "building-modern-web-apps-with-react",
     title: "Building Modern Web Apps With React",
     description:
-      "Master component-based architecture, state management with Hooks, and client-side routing to build fast, scalable web applications.",
+      "Build fast, scalable web apps using component architecture, Hooks, and client-side routing.",
     image: "/assets/images/courses/building-modern-web-react.png",
     alt: "Modern Web React Course",
     slug: "building-modern-web-apps-with-react",

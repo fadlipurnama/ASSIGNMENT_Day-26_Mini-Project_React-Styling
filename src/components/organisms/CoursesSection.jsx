@@ -1,8 +1,8 @@
 import { fetchCourses } from "@/services/data";
-import { Button } from "@base-ui/react";
 import { RotateCw } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import CourseList from "../molecules/CourseList";
+import { Button } from "../atoms/button";
 
 function CoursesSection() {
   const { data, isLoading, isError, error, refetch, isFetching } = useQuery({
@@ -18,16 +18,17 @@ function CoursesSection() {
 
   return (
     <section className="container flex flex-col gap-10 p-4 bg-background">
-      <div className="flex gap-4 items-center">
-        <h2 className="max-w-1/2 text-foreground font-black text-3xl tracking-[-1px]">
-          Start Learning Design & Development with Our Featured Courses
+      <div className="flex gap-4">
+        <h2 className="text-foreground font-black text-3xl tracking-[-1px]">
+          Start Learning Design & Development 
+          <br/> 
+          with OurFeatured Courses
         </h2>
         {error && (
           <Button
             onClick={() => refetch()}
-            variant="secondary"
             size="sm"
-            className="flex gap-2"
+            className="flex gap-2 mt-2"
           >
             Refresh
             <RotateCw />
