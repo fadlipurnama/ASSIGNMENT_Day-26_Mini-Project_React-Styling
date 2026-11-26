@@ -1,4 +1,4 @@
-import { fetchCourses } from "@/services/data";
+import { fetchCourses } from "@/services/lmsService";
 import { RotateCw } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 // import CourseList from "../../molecules/CourseList";
@@ -15,7 +15,6 @@ function CoursesSection() {
     retry: false,
     staleTime: 60_000,
   });
-
   const errorMessage = error?.message
     ? `${error.message}${error?.status ? `, status code: ${error.status}` : ""}`
     : "Failed to load courses data";
@@ -51,13 +50,15 @@ function CoursesSection() {
             </p>
           ) : (
             <div className="col-span-2 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {data?.map((course) => (
-                <CourseCard
-                  key={course.id}
-                  course={course}
-                  onPreviewCourse={(course) => setSelectedCourse(course)}
-                />
-              ))}
+              {data
+                ?.filter((item) => item.featured)
+                .map((course) => (
+                  <CourseCard
+                    key={course.id}
+                    course={course}
+                    onPreviewCourse={(course) => setSelectedCourse(course)}
+                  />
+                ))}
             </div>
           )}
         </>
