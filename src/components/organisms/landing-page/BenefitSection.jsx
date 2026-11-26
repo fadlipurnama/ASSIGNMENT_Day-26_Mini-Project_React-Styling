@@ -1,8 +1,8 @@
-import { fetchBenefits } from "@/services/data";
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "../../atoms/button";
 import { RotateCw } from "lucide-react";
 import BenefitCard from "@/components/molecules/BenefitCard";
+import { fetchBenefits } from "@/services/lmsService";
 
 function BenefitSection() {
   const { data, isLoading, isError, error, refetch, isFetching } = useQuery({
