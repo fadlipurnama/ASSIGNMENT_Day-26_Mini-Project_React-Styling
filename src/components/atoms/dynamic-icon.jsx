@@ -1,22 +1,27 @@
 import {
   Award,
   BookOpen,
+  CalendarClock,
   Certificate,
   CheckCircle,
   Clock,
   FileText,
+  FolderGit2,
   GlobeCheck,
+  GraduationCap,
   HelpCircle,
+  LaptopMinimalCheckIcon,
   Lightbulb,
   MessagesSquare,
   ShieldCheck,
   Sparkles,
   Users,
+  UsersRound,
 } from "lucide-react";
 
 export const ICON_REGISTRY = {
   award: Award,
-  "certificate": Certificate,
+  certificate: Certificate,
   "book-open": BookOpen,
   "check-circle": CheckCircle,
   clock: Clock,
@@ -27,6 +32,11 @@ export const ICON_REGISTRY = {
   "shield-check": ShieldCheck,
   sparkles: Sparkles,
   users: Users,
+  "calendar-clock": CalendarClock,
+  "users-round": UsersRound,
+  "laptop-minimal-check-icon": LaptopMinimalCheckIcon,
+  "folder-git-2": FolderGit2,
+  "graduation-cap": GraduationCap,
 };
 
 // Opsional: export daftar key-nya kalau mau dipakai di dropdown admin / validasi
