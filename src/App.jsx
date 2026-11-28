@@ -1,20 +1,21 @@
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/organisms/Header";
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
-import Footer from "./components/organisms/Footer";
+import CoursesPage from "./pages/CoursesPage";
+import MainLayout from "./layouts/MainLayout";
+import CourseDetailPage from "./pages/CourseDetailPage";
 
 function App() {
   return (
     <>
-      <Header />
-      <main>
-        <Routes>
+      <Routes>
+        <Route element={<MainLayout />}>
           <Route path="*" element={<NotFoundPage />} />
           <Route path="/" element={<HomePage />} />
-        </Routes>
-      </main>
-      <Footer />
+          <Route path="/courses" element={<CoursesPage />} />
+          <Route path="/courses/:slug" element={<CourseDetailPage />} />
+        </Route>
+      </Routes>
     </>
   );
 }
